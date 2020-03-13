@@ -12,6 +12,7 @@ const globalMiddleWare = [express.json(), helmet(), logger];
 server.use(globalMiddleWare);
 
 server.use("/api/projects", projectRouter);
+server.use("/api/actions", actionRouter);
 
 server.get("/", (req, res) => {
   const newThing = { thing: "Cool", yep: "yes" };
